@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  background: linear-gradient(rgba(255, 254, 254, 0.7), rgba(0, 0, 0, 0.8)),
+    url(/img/bg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.navbar {
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  width: 20%;
+  padding: 20px;
+  float: right;
+}
+.nav-area {
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+}
+.nav-area li {
+  display: inline-block;
+  padding: 15px;
+}
+.nav-area li a {
+  color: darkslategray;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family: poppins;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.nav-area li a:hover {
+  background: lightskyblue;
+  color: gray;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+  transition: 0.6s;
+}
+.container h1 {
+  color: #0f1a50;
+}
+.container h2 {
+  margin-bottom: 40px;
+  color: #0f1a50;
+}
+.contact-box {
+  background: whitesmoke;
+  display: flex;
+}
+.contact-left {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+.contact-right {
+  flex-basis: 40%;
+}
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.input-row .input-group {
+  flex-basis: 45%;
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: none;
+  outline: none;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+textarea {
+  border: 2px solid #ccc;
+  outline: none;
+  margin-top: 25px;
+  padding: 10px;
+}
+label {
+  margin-bottom: 5px;
+  display: block;
+  color: lightskyblue;
+}
+.bottom-box {
+  display: flex;
+}
+.message {
+  width: 45%;
+}
+.address {
+  color: lightskyblue;
+  margin-top: 60px;
+  margin-left: 80px;
+  text-decoration: none;
+}
+.address h3 {
+  padding-bottom: 7px;
+}
+.address h4 {
+  padding-bottom: 7px;
+}
+.address h5 {
+  padding-bottom: 3px;
+}
+button {
+  display: inline-block;
+  border: none;
+  padding: 5px 10px;
+  background-color: lightskyblue;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+.contact-right h3 {
+  padding: 10px;
+  color: lightskyblue;
+}

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url(/img/bg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.navbar {
+  width: 100%;
+  margin: auto;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  width: 30%;
+  padding: 25px;
+  float: right;
+}
+.nav-area {
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+}
+.nav-area li {
+  display: inline-block;
+  padding: 15px;
+}
+.nav-area li a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family: poppins;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.nav-area li a:hover {
+  background: yellow;
+  border-radius: 30px;
+  color: gray;
+}
+.welcome-text {
+  position: absolute;
+  margin: 20% 30%;
+  text-align: center;
+}
+.welcome-text h1 {
+  text-align: center;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.welcome-text h1 span {
+  color: yellow;
+}
+.welcome-text a {
+  border: 1px solid whitesmoke;
+  border-radius: 30px;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+  color: whitesmoke;
+  transition: 0.8s;
+}
+.welcome-text a:hover {
+  border: 1px solid yellow;
+  background: yellow;
+  color: gray;
+  transform: scale(1.5);
+}
