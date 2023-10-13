@@ -4,8 +4,8 @@
   font-family: "Poppins", sans-serif;
 }
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-    img(/img/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url(img/bg.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
