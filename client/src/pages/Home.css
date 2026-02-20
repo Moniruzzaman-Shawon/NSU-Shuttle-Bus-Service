@@ -1,0 +1,250 @@
+/* ── Hero ──────────────────────────────── */
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+.welcome-text h1 {
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1.2;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.welcome-text h1 span {
+  color: var(--primary);
+}
+
+.welcome-sub {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-top: 16px;
+  animation: fadeSlideIn 0.8s ease 0.2s both;
+}
+
+.welcome-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  animation: fadeSlideIn 0.8s ease 0.4s both;
+}
+
+/* ── Section Titles ───────────────────── */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: var(--text-light);
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+/* ── Image Slider ─────────────────────── */
+.home-slider {
+  background: var(--dark-card);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ── Features ─────────────────────────── */
+.home-features {
+  background: var(--dark);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: var(--dark-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 40px 30px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px rgba(91, 155, 245, 0.1);
+}
+
+.feature-icon {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  color: var(--text-light);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ── How It Works ─────────────────────── */
+.home-how-it-works {
+  background: var(--dark-card);
+}
+
+.steps-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.step-card {
+  background: var(--dark-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 40px 30px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.step-card h3 {
+  color: var(--text-light);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.step-connector {
+  width: 50px;
+  height: 2px;
+  background: var(--border-medium);
+  flex-shrink: 0;
+}
+
+/* ── Stats ─────────────────────────────── */
+.home-stats {
+  background: linear-gradient(135deg, rgba(91, 155, 245, 0.06), rgba(126, 184, 255, 0.04));
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.home-stat-number {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.home-stat-label {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ── CTA ───────────────────────────────── */
+.home-cta {
+  background: var(--dark);
+}
+
+.home-cta h2 {
+  font-size: 32px;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.home-cta p {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 28px;
+  }
+
+  .welcome-sub {
+    font-size: 14px;
+  }
+
+  .welcome-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .steps-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .step-connector {
+    width: 2px;
+    height: 30px;
+  }
+
+  .step-card {
+    max-width: 100%;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .home-stat-number {
+    font-size: 30px;
+  }
+
+  .home-cta h2 {
+    font-size: 24px;
+  }
+}

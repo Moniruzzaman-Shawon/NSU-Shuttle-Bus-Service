@@ -1,0 +1,185 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: var(--nav-height);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: background 0.3s ease;
+}
+
+.navbar-dark {
+  background: rgba(10, 14, 26, 0.6);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.navbar-light {
+  background: rgba(15, 20, 36, 0.6);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ── Brand ─────────────────────────────── */
+.nav-brand a img {
+  width: 50px;
+  display: block;
+}
+
+/* ── Hamburger ─────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text-light);
+  transition: 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ── Nav Links ─────────────────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 7px 18px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--primary);
+  color: var(--text-dark);
+}
+
+/* ── Login Button ──────────────────────── */
+.nav-login-btn {
+  border: 1px solid var(--border-medium) !important;
+}
+
+/* ── Avatar ────────────────────────────── */
+.nav-avatar {
+  width: 36px !important;
+  height: 36px;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px !important;
+  font-weight: 700;
+  padding: 0 !important;
+  flex-shrink: 0;
+  background: var(--primary) !important;
+  color: var(--text-dark) !important;
+}
+
+/* ── Logout ────────────────────────────── */
+.nav-logout {
+  background: transparent;
+  border: 1px solid var(--border-medium);
+  padding: 6px 18px;
+  font-family: var(--font);
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.nav-logout:hover {
+  background: var(--primary);
+  color: var(--text-dark);
+  border-color: var(--primary);
+}
+
+/* ── User Section ──────────────────────── */
+.nav-user-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 6px;
+}
+
+/* ── Mobile ────────────────────────────── */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 30px 40px;
+    gap: 6px;
+    transition: right 0.35s ease;
+    background: rgba(10, 14, 26, 0.97);
+    border-left: 1px solid var(--border-light);
+  }
+
+  .nav-links.nav-open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 18px;
+  }
+
+  .nav-user-section {
+    margin-left: 0;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-light);
+    width: 100%;
+  }
+}

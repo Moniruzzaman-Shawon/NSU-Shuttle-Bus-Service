@@ -1,0 +1,91 @@
+.dashboard-page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.dashboard-content {
+  padding: 20px 40px 40px;
+}
+
+/* ── Welcome Banner ────────────────────── */
+.dash-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  margin-bottom: 25px;
+  animation: fadeSlideIn 0.5s ease;
+}
+
+.dash-welcome-text h1 {
+  color: var(--primary);
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.dash-welcome-text p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.dash-mini-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.dash-mini-stat {
+  text-align: center;
+}
+
+.mini-stat-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.mini-stat-num.pending-color {
+  color: #ff9800;
+}
+
+.mini-stat-num.confirmed-color {
+  color: #4caf50;
+}
+
+.mini-stat-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Grid ──────────────────────────────── */
+.dashboard-content h2 {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.empty-text {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-content {
+    padding: 20px;
+  }
+  .dash-welcome {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

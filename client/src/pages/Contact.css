@@ -1,0 +1,141 @@
+.contact-section {
+  background: var(--dark);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ── Form ──────────────────────────────── */
+.contact-form-wrapper h2 {
+  color: var(--text-light);
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.contact-form-row .contact-field {
+  margin-bottom: 0;
+}
+
+.contact-field label {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
+  font-family: var(--font);
+  font-size: 14px;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #666;
+}
+
+.contact-form-wrapper .btn-primary {
+  margin-top: 8px;
+}
+
+/* ── Info Card ─────────────────────────── */
+.contact-info-card {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-info-card h3 {
+  color: var(--text-light);
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.contact-tagline {
+  color: var(--primary);
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contact-info-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-info-item strong {
+  color: var(--text-light);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.contact-info-item p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-map {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-form-wrapper h2 {
+    font-size: 22px;
+  }
+}

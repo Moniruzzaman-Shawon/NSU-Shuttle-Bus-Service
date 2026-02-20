@@ -1,0 +1,81 @@
+.services-section {
+  background: var(--dark);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  display: flex;
+  gap: 20px;
+  background: var(--dark-card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  transition: var(--transition);
+  animation: fadeSlideIn 0.5s ease both;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--accent);
+  box-shadow: 0 6px 25px rgba(214, 252, 4, 0.06);
+}
+
+.service-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-info h3 {
+  color: var(--text-light);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service-info p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ── CTA ───────────────────────────────── */
+.services-cta {
+  background: var(--dark-card);
+  border-top: 1px solid var(--border-light);
+}
+
+.services-cta h2 {
+  font-size: 32px;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.services-cta p {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 22px;
+  }
+
+  .services-cta h2 {
+    font-size: 26px;
+  }
+}

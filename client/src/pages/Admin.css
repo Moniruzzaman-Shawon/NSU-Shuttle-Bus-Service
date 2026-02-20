@@ -1,0 +1,241 @@
+.admin-page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-content {
+  padding: 20px 40px 40px;
+}
+
+.admin-content h1 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* ── Stats Grid ────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* ── Tabs ──────────────────────────────── */
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-tabs button {
+  padding: 8px 20px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.admin-tabs button.active {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: #333;
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+.admin-tabs button:hover:not(.active) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ── Filter Bar ────────────────────────── */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 9px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
+  font-family: var(--font);
+  font-size: 13px;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.filter-input::placeholder {
+  color: #666;
+}
+
+.filter-date {
+  flex: 0;
+  min-width: 150px;
+}
+
+.filter-select {
+  padding: 9px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
+  font-family: var(--font);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.empty-text {
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+/* ── Tab Content ───────────────────────── */
+.tab-content {
+  min-height: 200px;
+}
+
+/* ── Add Stop Form ─────────────────────── */
+.add-stop-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.add-stop-form input {
+  padding: 8px 12px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: var(--font);
+  font-size: 13px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.add-stop-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.add-stop-form .btn-primary {
+  padding: 8px 20px;
+  font-size: 13px;
+}
+
+/* ── Tables ────────────────────────────── */
+.stops-table {
+  overflow-x: auto;
+}
+
+.stops-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stops-table th,
+.stops-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.stops-table th {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.stops-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stops-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font);
+}
+
+.delete-btn:hover {
+  background: var(--error);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    padding: 20px;
+  }
+  .add-stop-form {
+    flex-direction: column;
+  }
+  .filter-bar {
+    flex-direction: column;
+  }
+  .filter-input,
+  .filter-date {
+    min-width: 100%;
+  }
+}

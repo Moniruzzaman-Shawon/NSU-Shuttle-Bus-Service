@@ -1,0 +1,16 @@
+.map-picker {
+  margin-bottom: 20px;
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.map-hint {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #ccc;
+}

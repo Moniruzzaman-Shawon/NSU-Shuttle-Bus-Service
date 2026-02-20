@@ -1,0 +1,128 @@
+.profile-page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.profile-content {
+  padding: 20px 40px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Header ────────────────────────────── */
+.profile-header {
+  text-align: center;
+  margin-bottom: 35px;
+  animation: fadeSlideIn 0.5s ease;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--dark);
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.profile-header h1 {
+  color: var(--text-light);
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.profile-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.profile-role {
+  display: inline-block;
+  padding: 3px 14px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ── Grid ──────────────────────────────── */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.profile-card {
+  padding: 30px;
+}
+
+.profile-card h2 {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.profile-field {
+  margin-bottom: 18px;
+}
+
+.profile-field label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.profile-field input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
+  font-family: var(--font);
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.profile-field input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.profile-field input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.profile-card .btn-primary {
+  width: 100%;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    padding: 20px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    padding: 24px 20px;
+  }
+}

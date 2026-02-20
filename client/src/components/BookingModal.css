@@ -1,0 +1,126 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 20px;
+  animation: fadeSlideIn 0.25s ease;
+}
+
+.modal-content {
+  background: var(--dark-surface, #1e1e1e);
+  border: 1px solid var(--border-light, rgba(255, 255, 255, 0.1));
+  border-radius: var(--radius-lg, 20px);
+  padding: 30px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-lg, 0 8px 40px rgba(0, 0, 0, 0.4));
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 26px;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--text-light);
+}
+
+.modal-title {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.modal-status-bar {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.modal-status-pending {
+  background: #ff9800;
+  color: white;
+}
+
+.modal-status-confirmed {
+  background: #4caf50;
+  color: white;
+}
+
+.modal-status-completed {
+  background: #2196f3;
+  color: white;
+}
+
+.modal-status-cancelled {
+  background: #f44336;
+  color: white;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modal-row:last-child {
+  border-bottom: none;
+}
+
+.modal-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.modal-value {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 24px 20px;
+  }
+
+  .modal-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .modal-value {
+    text-align: left;
+  }
+}
