@@ -1,5 +1,5 @@
 .hero-header {
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
 }
 
@@ -13,12 +13,50 @@
   background: linear-gradient(160deg, #0a0e1a 0%, #111b33 40%, #0f1424 100%);
 }
 
+[data-theme="light"] .hero-dark {
+  background: linear-gradient(160deg, #e8edf5 0%, #d5dff0 40%, #eef1f8 100%);
+}
+
 .hero-light {
   background: linear-gradient(160deg, #0f1424 0%, #162040 40%, #0a0e1a 100%);
 }
 
+[data-theme="light"] .hero-light {
+  background: linear-gradient(160deg, #eef1f8 0%, #d5dff0 40%, #e8edf5 100%);
+}
+
 .hero-dark-heavy {
   background: linear-gradient(160deg, #070b14 0%, #0d1526 40%, #0a0e1a 100%);
+}
+
+[data-theme="light"] .hero-dark-heavy {
+  background: linear-gradient(160deg, #dce3ef 0%, #cdd7ea 40%, #e0e6f2 100%);
+}
+
+/* ── Hero with background image ──────── */
+.hero-header.hero-with-bg {
+  background: url('/img/nsu-1024x538.webp') center center / cover no-repeat;
+  position: relative;
+}
+
+.hero-header.hero-with-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 14, 26, 0.65);
+  z-index: 1;
+}
+
+[data-theme="light"] .hero-header.hero-with-bg::before {
+  background: rgba(240, 243, 250, 0.72);
+}
+
+.hero-header.hero-with-bg > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-short .hero-content {

@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ToastProvider } from './context/ToastContext';
+import { ThemeProvider } from './context/ThemeContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -22,6 +23,7 @@ function AuthRedirect({ children }) {
 
 export default function App() {
   return (
+    <ThemeProvider>
     <AuthProvider>
       <ToastProvider>
         <Routes>
@@ -58,5 +60,6 @@ export default function App() {
         </Routes>
       </ToastProvider>
     </AuthProvider>
+    </ThemeProvider>
   );
 }

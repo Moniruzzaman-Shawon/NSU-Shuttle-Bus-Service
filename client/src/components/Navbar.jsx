@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 import './Navbar.css';
 
 export default function Navbar({ variant = 'dark' }) {
   const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -99,6 +101,17 @@ export default function Navbar({ variant = 'dark' }) {
             </li>
           </>
         )}
+
+        <li className="nav-theme-li">
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19'}
+          </button>
+        </li>
       </ul>
     </nav>
   );

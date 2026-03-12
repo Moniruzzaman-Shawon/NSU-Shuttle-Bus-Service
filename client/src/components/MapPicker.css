@@ -12,5 +12,5 @@
 .map-hint {
   margin-top: 8px;
   font-size: 13px;
-  color: #ccc;
+  color: var(--text-muted);
 }

@@ -46,7 +46,7 @@
   padding: 11px 14px;
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--input-bg);
   color: var(--text-light);
   font-family: var(--font);
   font-size: 14px;
@@ -62,7 +62,7 @@
 
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
-  color: #666;
+  color: var(--input-placeholder);
 }
 
 .contact-form-wrapper .btn-primary {
