@@ -1,23 +1,17 @@
-
+# NSU Shuttle Bus Service
 
 A full-stack shuttle bus booking system for **North South University** students. Book rides across Dhaka with an interactive map, flexible time slots, and real-time booking management.
 
 ![Home Dark](img/NSU/01-home-dark.png)
 
----
-## Applications
+<img width="1440" height="1787" alt="03-services" src="https://github.com/user-attachments/assets/e1734d65-ec3f-4ca9-971b-d12eaf670b47" />
 
-![Uploa<img width="780" height="7349" alt="10-mobile-home" src="https://github.com/user-attachments/assets/05df5394-56f5-49c1-a6aa-f6186cee152d" />
-<img width="1440" height="900" alt="09-admin" src="https://github.com/user-attachments/assets/2c7b91d8-44d9-49ab-a73a-dd5629d202de" />
-<img width="1440" height="900" alt="08-profile" src="https://github.com/user-attachments/assets/85ad4265-36ca-4381-8b97-380a2e53c18d" />
-<img width="1440" height="1119" alt="07-dashboard" src="https://github.com/user-attachments/assets/689bf6e4-6ff9-4147-b16c-5e0865b95fd5" />
-<img width="1440" height="900" alt="06-login" src="https://github.com/user-attachments/assets/1e6abd8f-39df-4821-a129-68646c49ba4e" />
-<img width="1440" height="1522" alt="05-contact" src="https://github.com/user-attachments/assets/91ca3812-bd62-4ee8-b4bf-fb78b0ced903" />
-<img width="1440" height="2161" alt="04-about" src="https://github.com/user-attachments/assets/a9dae501-587c-4ac7-a353-dd93e9b693a4" />
-<img width="1440" height="1787" alt="03-services" src="https://github.com/user-attachments/assets/34d52ca7-b914-45de-9ae8-5538cda670f1" />
-<img width="1440" height="4878" alt="02-home-light" src="https://github.com/user-attachments/assets/f28bfe02-1771-4753-b7a1-3b05b0998d4b" />
-ding 01-home-dark.png…]()
-<img width="1440" height="4878" alt="01-home-dark" src="https://github.com/user-attachments/assets/ff860def-6762-4259-a325-8815f0e9a3ad" /># NSU Shuttle Bus Service
+<img width="1440" height="900" alt="08-profile" src="https://github.com/user-attachments/assets/0c438b8b-a2c6-4fbb-b18d-80f31982c435" />
+
+<img width="1440" height="900" alt="09-admin" src="https://github.com/user-attachments/assets/48af9e73-c30d-4896-ab00-9f1e81a104ea" />
+
+---
+
 
 
 
