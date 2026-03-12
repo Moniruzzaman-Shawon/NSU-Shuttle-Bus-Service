@@ -1,4 +1,4 @@
-<img width="1440" height="4878" alt="01-home-dark" src="https://github.com/user-attachments/assets/ff860def-6762-4259-a325-8815f0e9a3ad" /># NSU Shuttle Bus Service
+
 
 A full-stack web application for managing the **North South University (NSU)** shuttle bus booking system.
 
@@ -17,6 +17,7 @@ Students can register/login using their NSU email, choose a predefined pickup st
 <img width="1440" height="1787" alt="03-services" src="https://github.com/user-attachments/assets/34d52ca7-b914-45de-9ae8-5538cda670f1" />
 <img width="1440" height="4878" alt="02-home-light" src="https://github.com/user-attachments/assets/f28bfe02-1771-4753-b7a1-3b05b0998d4b" />
 ding 01-home-dark.png…]()
+<img width="1440" height="4878" alt="01-home-dark" src="https://github.com/user-attachments/assets/ff860def-6762-4259-a325-8815f0e9a3ad" /># NSU Shuttle Bus Service
 
 
 
