@@ -1,8 +1,8 @@
 
 
-A full-stack web application for managing the **North South University (NSU)** shuttle bus booking system.
+A full-stack shuttle bus booking system for **North South University** students. Book rides across Dhaka with an interactive map, flexible time slots, and real-time booking management.
 
-Students can register/login using their NSU email, choose a predefined pickup stop (or select a custom location from a map), and book a shuttle ride for a specific date and time slot. Administrators can manage bookings, stops, and student data from an admin dashboard.
+![Home Dark](img/NSU/01-home-dark.png)
 
 ---
 ## Applications
@@ -21,225 +21,232 @@ ding 01-home-dark.png…]()
 
 
 
-## ✨ Features
+## Demo
 
-### Student
-- Register & login using `@northsouth.edu` email
-- Interactive map with **10+ predefined pickup stops** across Dhaka
-- Select a **custom pickup location** by clicking anywhere on the map
-- Book shuttles by **date + time slot** (7:00 AM – 7:00 PM)
-- View, track, and cancel pending bookings
-- Booking details modal on click
-- Edit profile (name, student ID) and change password
+| Dark Mode | Light Mode |
+|-----------|------------|
+| ![Dark](img/NSU/01-home-dark.png) | ![Light](img/NSU/02-home-light.png) |
 
-### Admin
-- Dashboard with overview stats (students, bookings, stops)
+---
+
+## Features
+
+### Student Portal
+- Register & login with `@northsouth.edu` email
+- Interactive Leaflet map with **10+ predefined pickup stops** across Dhaka
+- Custom pickup location by clicking anywhere on the map
+- Book shuttles by **date + time slot** (7:00 AM - 7:00 PM)
+- View, track, and cancel bookings
+- Edit profile and change password
+
+### Admin Dashboard
+- Overview stats (students, bookings, stops)
 - Manage all bookings (confirm, complete, cancel)
-- Search & filter bookings by name, email, stop, status, or date
-- Add / update / delete shuttle stops
+- Search & filter by name, email, stop, status, or date
+- Add / delete shuttle stops
 - View all registered students
 
-### General UI
-- Toast notifications for user actions
-- Mobile-responsive layout with hamburger navigation
-- Image slider showcasing the shuttle fleet
-- Contact form that saves messages to the database
-- Dark blue theme with monospace typography
+### General
+- Dark / Light theme toggle
+- Mobile-responsive design
+- Toast notifications
+- Image slider fleet gallery
+- Contact form
 
 ---
 
-## 🧰 Tech Stack
+## Screenshots
 
-| Layer     | Technology |
-|----------|------------|
+### Services & About
+| Services | About |
+|----------|-------|
+| ![Services](img/NSU/03-services.png) | ![About](img/NSU/04-about.png) |
+
+### Contact & Login
+| Contact | Login |
+|---------|-------|
+| ![Contact](img/NSU/05-contact.png) | ![Login](img/NSU/06-login.png) |
+
+### Student Dashboard
+![Dashboard](img/NSU/07-dashboard.png)
+
+### Profile & Admin Panel
+| Profile | Admin |
+|---------|-------|
+| ![Profile](img/NSU/08-profile.png) | ![Admin](img/NSU/09-admin.png) |
+
+### Mobile Responsive
+<p align="center">
+  <img src="img/NSU/10-mobile-home.png" alt="Mobile" width="320">
+</p>
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
 | Frontend | React 18, React Router 6, Vite |
-| Backend  | Node.js, Express |
-| Database | SQLite3 (`better-sqlite3`) |
-| Auth     | JWT + bcrypt |
-| Maps     | Leaflet + React Leaflet |
-| HTTP     | Axios |
-| Font     | Roboto Mono |
+| Backend | Node.js, Express |
+| Database | SQLite3 (better-sqlite3) |
+| Auth | JWT + bcrypt |
+| Maps | Leaflet + React Leaflet |
+| HTTP | Axios |
+| Font | Roboto Mono |
 
 ---
 
-## 📁 Project Structure
-````
+## Project Structure
+
+```
 NSU-Shuttle-Bus-Service/
-├── client/ # React frontend
-│ ├── public/img/ # Static images (logo, shuttle photos)
-│ └── src/
-│ ├── components/ # Navbar, Footer, HeroHeader, ImageSlider,
-│ │ # BookingCard, BookingForm, BookingModal,
-│ │ # MapPicker, ProtectedRoute
-│ ├── context/ # AuthContext, ToastContext
-│ ├── pages/ # Home, Login, Services, About, Contact,
-│ │ # Dashboard, Admin, Profile
-│ ├── styles/ # Toast.css
-│ ├── utils/ # api.js (Axios instance)
-│ ├── App.jsx
-│ └── App.css # Design tokens and global styles
+├── client/                     # React frontend (Vite)
+│   ├── public/img/             # Static images
+│   └── src/
+│       ├── components/         # Navbar, Footer, HeroHeader, ImageSlider,
+│       │                       # BookingCard, BookingForm, BookingModal,
+│       │                       # MapPicker, ProtectedRoute
+│       ├── context/            # AuthContext, ToastContext, ThemeContext
+│       ├── pages/              # Home, Login, Services, About, Contact,
+│       │                       # Dashboard, Admin, Profile
+│       ├── styles/             # Toast.css
+│       ├── utils/              # api.js (Axios instance)
+│       ├── App.jsx
+│       └── App.css             # Design tokens & global styles
 │
-├── server/ # Express backend
-│ ├── db/
-│ │ ├── database.js # SQLite schema
-│ │ └── seed.js # Seed admin user + 10 Dhaka stops
-│ ├── middleware/
-│ │ └── auth.js # JWT auth + admin guard
-│ ├── routes/
-│ │ ├── auth.js # Register, login, profile, password
-│ │ ├── bookings.js # CRUD bookings
-│ │ ├── stops.js # CRUD stops
-│ │ ├── admin.js # Stats + student list
-│ │ └── contact.js # Contact form submissions
-│ └── index.js # Express server entry point
+├── server/                     # Express backend
+│   ├── db/
+│   │   ├── database.js         # SQLite schema
+│   │   └── seed.js             # Seed admin + 10 Dhaka stops
+│   ├── middleware/
+│   │   └── auth.js             # JWT auth + admin guard
+│   ├── routes/
+│   │   ├── auth.js             # Register, login, profile, password
+│   │   ├── bookings.js         # CRUD bookings
+│   │   ├── stops.js            # CRUD stops
+│   │   ├── admin.js            # Stats + student list
+│   │   └── contact.js          # Contact form
+│   ├── __tests__/
+│   │   └── api.test.js         # 47 unit tests
+│   └── index.js                # Express entry point
 │
-└── package.json # Root scripts
-````
+└── package.json                # Root scripts
+```
 
 ---
 
-## ✅ Prerequisites
+## Getting Started
+
+### Prerequisites
 - Node.js **18+**
 - npm
 
----
-
-## 🚀 Getting Started
-
-### 1) Clone the repository
+### 1. Clone
 ```bash
-git clone https://github.com/your-username/NSU-Shuttle-Bus-Service.git
+git clone https://github.com/Moniruzzaman-Shawon/NSU-Shuttle-Bus-Service.git
 cd NSU-Shuttle-Bus-Service
 ```
 
-### 2) Install dependencies (root + client + server)
-````
+### 2. Install dependencies
+```bash
 npm run install-all
-````
-
-### 3) Seed the database
-````
-npm run seed
-````
-This creates:
-
-Admin login: admin@northsouth.edu
-
-Password: admin123
-
-And seeds 10 predefined pickup stops:
 ```
-Mirpur 10
 
-Dhanmondi 27
+### 3. Seed the database
+```bash
+npm run seed
+```
 
-Gulshan 1
+This creates:
+- **Admin:** `admin@northsouth.edu` / `admin123`
+- **10 pickup stops:** Mirpur 10, Dhanmondi 27, Gulshan 1, Uttara Sector 3, Banani Chairmanbari, Mohakhali Bus Stand, Farmgate, Motijheel, Bashundhara Gate, NSU Campus
 
-Uttara Sector 3
-
-Banani Chairmanbari
-
-Mohakhali Bus Stand
-
-Farmgate
-
-Motijheel
-
-Bashundhara Gate
-
-NSU Campus
-````
-
-### 4) Run development servers (client + server)
-````
+### 4. Run development servers
+```bash
 npm run dev
-````
-URLs
-````
-Frontend: http://localhost:5180
+```
 
-Backend: http://localhost:3001
-````
-🏗️ Production Build
-````
-cd client && npm run build
-````
-The built frontend in client/dist is automatically served by Express when:
-````
-NODE_ENV=production
-````
-
-
-
-## 🔌 API Endpoints
-
-| Method | Endpoint | Auth | Description |
-|-------:|----------|------|-------------|
-| POST   | `/api/auth/register` | — | Register with NSU email |
-| POST   | `/api/auth/login` | — | Login |
-| GET    | `/api/auth/me` | ✅ Required | Get current user |
-| PATCH  | `/api/auth/profile` | ✅ Required | Update name + student ID |
-| PATCH  | `/api/auth/password` | ✅ Required | Change password |
-| GET    | `/api/stops` | ✅ Required | List all stops |
-| POST   | `/api/stops` | ✅ Admin | Add a stop |
-| PUT    | `/api/stops/:id` | ✅ Admin | Update a stop |
-| DELETE | `/api/stops/:id` | ✅ Admin | Delete a stop |
-| GET    | `/api/bookings` | ✅ Required | List bookings |
-| POST   | `/api/bookings` | ✅ Required | Create a booking |
-| PATCH  | `/api/bookings/:id` | ✅ Required | Update booking status |
-| GET    | `/api/admin/stats` | ✅ Admin | Dashboard statistics |
-| GET    | `/api/admin/students` | ✅ Admin | List all students |
-| POST   | `/api/contact` | — | Submit contact form message |
+| Service | URL |
+|---------|-----|
+| Frontend | http://localhost:5180 |
+| Backend | http://localhost:3001 |
 
 ---
 
-## 🗄️ Database Schema (SQLite)
+## Production Deployment
 
-### `users`
-Stores student and admin accounts.
+```bash
+npm run build    # Builds React app
+npm start        # Starts Express server (serves frontend + API)
+```
 
+Set environment variable: `NODE_ENV=production`
+
+The database auto-seeds on first startup.
+
+---
+
+## API Endpoints
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/auth/register` | - | Register with NSU email |
+| POST | `/api/auth/login` | - | Login |
+| GET | `/api/auth/me` | JWT | Get current user |
+| PATCH | `/api/auth/profile` | JWT | Update name + student ID |
+| PATCH | `/api/auth/password` | JWT | Change password |
+| GET | `/api/stops` | JWT | List all stops |
+| POST | `/api/stops` | Admin | Add a stop |
+| PUT | `/api/stops/:id` | Admin | Update a stop |
+| DELETE | `/api/stops/:id` | Admin | Delete a stop |
+| GET | `/api/bookings` | JWT | List bookings |
+| POST | `/api/bookings` | JWT | Create a booking |
+| PATCH | `/api/bookings/:id` | JWT | Update booking status |
+| GET | `/api/admin/stats` | Admin | Dashboard statistics |
+| GET | `/api/admin/students` | Admin | List all students |
+| POST | `/api/contact` | - | Submit contact form |
+
+---
+
+## Database Schema
+
+### users
 | Column | Type | Notes |
-|--------|------|------|
+|--------|------|-------|
 | id | INTEGER | Primary key |
 | name | TEXT | Full name |
-| email | TEXT | Unique, must be `@northsouth.edu` |
+| email | TEXT | Unique, `@northsouth.edu` |
 | student_id | TEXT | Optional, 7 digits |
 | password_hash | TEXT | bcrypt hash |
 | role | TEXT | `student` or `admin` |
 | created_at | DATETIME | Auto-generated |
 
-### `stops`
-Predefined pickup locations.
-
+### stops
 | Column | Type | Notes |
-|--------|------|------|
+|--------|------|-------|
 | id | INTEGER | Primary key |
 | name | TEXT | Stop name |
 | lat | REAL | Latitude |
 | lng | REAL | Longitude |
 | area_name | TEXT | Area / district |
 
-### `bookings`
-Shuttle ride bookings.
-
+### bookings
 | Column | Type | Notes |
-|--------|------|------|
+|--------|------|-------|
 | id | INTEGER | Primary key |
-| user_id | INTEGER | FK → `users` |
-| stop_id | INTEGER | FK → `stops` (nullable) |
-| custom_lat | REAL | Custom pickup latitude (nullable) |
-| custom_lng | REAL | Custom pickup longitude (nullable) |
-| custom_address | TEXT | Custom pickup description (nullable) |
+| user_id | INTEGER | FK → users |
+| stop_id | INTEGER | FK → stops (nullable) |
+| custom_lat | REAL | Custom latitude (nullable) |
+| custom_lng | REAL | Custom longitude (nullable) |
+| custom_address | TEXT | Custom description (nullable) |
 | booking_date | TEXT | Ride date |
-| time_slot | TEXT | Time slot (7:00 AM – 7:00 PM) |
-| status | TEXT | `pending`, `confirmed`, `completed`, `cancelled` |
+| time_slot | TEXT | 7:00 AM - 7:00 PM |
+| status | TEXT | pending, confirmed, completed, cancelled |
 | created_at | DATETIME | Auto-generated |
 
-### `contact_messages`
-Contact form submissions.
-
+### contact_messages
 | Column | Type | Notes |
-|--------|------|------|
+|--------|------|-------|
 | id | INTEGER | Primary key |
 | name | TEXT | Sender name |
 | email | TEXT | Sender email |
@@ -250,12 +257,33 @@ Contact form submissions.
 
 ---
 
-## 📜 Scripts
+## Scripts
 
 | Command | Description |
-|--------|-------------|
-| `npm run dev` | Start both client and server |
+|---------|-------------|
+| `npm run dev` | Start client + server |
 | `npm run client` | Start frontend only |
 | `npm run server` | Start backend only |
-| `npm run seed` | Seed database (admin + stops) |
-| `npm run install-all` | Install dependencies for root, client, and server |
+| `npm run build` | Production build |
+| `npm start` | Start production server |
+| `npm run seed` | Seed database |
+| `npm run install-all` | Install all dependencies |
+| `cd server && npm test` | Run 47 unit tests |
+
+---
+
+## Testing
+
+```bash
+cd server && npm test
+```
+
+**47 tests** covering all API endpoints — auth, bookings, stops, admin, contact, and middleware.
+
+---
+
+## Author
+
+**Moniruzzaman Shawon**
+
+Built for North South University students.
