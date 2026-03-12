@@ -29,9 +29,21 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+// Auto-seed on first run if DB is empty
+const db = require('./db/database');
+const seedDb = async () => {
+  const adminExists = db.prepare('SELECT id FROM users WHERE email = ?').get('admin@northsouth.edu');
+  if (!adminExists) {
+    console.log('Empty database detected — running seed...');
+    require('./db/seed');
+  }
+};
+
 if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  seedDb().then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
   });
 }
 
