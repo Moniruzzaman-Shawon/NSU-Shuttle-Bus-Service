@@ -4,16 +4,8 @@ A full-stack shuttle bus booking system for **North South University** students.
 
 ![Home Dark](img/NSU/01-home-dark.png)
 
-<img width="1440" height="1787" alt="03-services" src="https://github.com/user-attachments/assets/e1734d65-ec3f-4ca9-971b-d12eaf670b47" />
-
-<img width="1440" height="900" alt="08-profile" src="https://github.com/user-attachments/assets/0c438b8b-a2c6-4fbb-b18d-80f31982c435" />
-
-<img width="1440" height="900" alt="09-admin" src="https://github.com/user-attachments/assets/48af9e73-c30d-4896-ab00-9f1e81a104ea" />
 
 ---
-
-
-
 
 ## Demo
 
